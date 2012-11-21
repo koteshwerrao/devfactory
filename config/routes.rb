@@ -12,7 +12,8 @@ EmFtpdTrialAssignment::Application.routes.draw do
   get "files/download"
 
   get "files/delete"
-match "files/upload", :as => "upload"  
+  match "files/upload", :as => "upload"  
+  match "files/delete",:as => "delete"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
