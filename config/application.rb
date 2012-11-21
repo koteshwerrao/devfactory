@@ -59,8 +59,7 @@ module EmFtpdTrialAssignment
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-     AWS::S3::Base.establish_connection!(  
+AWS::S3::Base.establish_connection!(  
       :access_key_id     => 'AKIAJ2IGHZQHCSJYT22A',  
       :secret_access_key => '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'  
     )  

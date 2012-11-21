@@ -1,21 +1,20 @@
 class FilesController < ApplicationController
-
-    def index  
-      
+   def index  
       bucket = AWS::S3::Bucket.find("em-ftpd-trial-kotesh") 
        @files = AWS::S3::Bucket.find("em-ftpd-trial-kotesh").objects  
       puts bucket.inspect
       puts 888888888888888888888
-      puts bucket.objects.inspect
+a=bucket.objects.first
+      puts a.size.inspect
   end
   def upload  
     begin  
       #AWS::S3::S3Object.store(params[:file].original_filename, params[:file].read, "em-ftpd-trial-kotesh", :access => :public_read)
      AWS::S3::S3Object.store(sanitize_filename(params[:file].original_filename), params[:file].read, "em-ftpd-trial-kotesh",:access => :public_read) 
 
-            redirect_to root_path  
+            redirect_to files_index_path
     rescue  
-        render :text => "Couldn't complete the upload"  
+        render :text => "The file is already exist"  
         end  
     end  
 
@@ -23,8 +22,14 @@ class FilesController < ApplicationController
   end
 
   def delete
-  end
+    if (params[:id]) 
+      AWS::S3::S3Object.find(params[:id], "em-ftpd-trial-kotesh").delete  
 
+      redirect_to files_index_path
+    else  
+      render :text => "No file was found to delete!"  
+    end  
+  end  
 
 private
 def sanitize_filename(file_name)  

@@ -1,4 +1,10 @@
 EmFtpdTrialAssignment::Application.routes.draw do
+  get "pictures/index"
+
+  get "pictures/new"
+
+  get "pictures/show"
+
   get "files/index"
 
   #get "files/upload"

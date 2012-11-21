@@ -10,7 +10,7 @@ gem 'mysql2'
 gem 'therubyracer'
 gem 'execjs'
 gem 'aws-s3', :require => 'aws/s3'
-gem "paperclip", "~> 3.0"  
+#gem "paperclip", "~> 3.0"  
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
