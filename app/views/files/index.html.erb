@@ -1,0 +1,10 @@
+<h2>Upload new file:</h2>  
+<%= form_tag upload_path, :method => "post", :multipart => true do %>  
+<%= file_field_tag :file%>  
+<%= submit_tag "Upload" %>
+  <% end %>  
+<%#= link_to "Download", download_url_for(@files.filename) %>
+<% @files.each do |ab| %>
+<%= ab.key %><%= link_to "Download", download_url_for(ab.key) %><br/>
+
+<% end %>
