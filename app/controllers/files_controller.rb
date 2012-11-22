@@ -5,10 +5,8 @@ class FilesController < ApplicationController
   end
   def upload  
     begin  
-      #AWS::S3::S3Object.store(params[:file].original_filename, params[:file].read, "em-ftpd-trial-kotesh", :access => :public_read)
      AWS::S3::S3Object.store(sanitize_filename(params[:file].original_filename), params[:file].read, "em-ftpd-trial-kotesh",:access => :public_read) 
-
-            redirect_to files_index_path
+         redirect_to files_index_path
     rescue  
         render :text => "The file is already exist"  
         end  
