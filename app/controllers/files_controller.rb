@@ -2,10 +2,6 @@ class FilesController < ApplicationController
    def index  
       bucket = AWS::S3::Bucket.find("em-ftpd-trial-kotesh") 
        @files = AWS::S3::Bucket.find("em-ftpd-trial-kotesh").objects  
-      puts bucket.inspect
-      puts 888888888888888888888
-      a = bucket.objects.first
-      puts a.size.inspect
   end
   def upload  
     begin  
