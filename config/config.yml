@@ -1,0 +1,22 @@
+---
+:user: admin
+
+:group: 
+
+:bucket: em-ftpd-trial-assignment
+
+:aws_key: AKIAJ2IGHZQHCSJYT22A
+
+:aws_secret: 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
+
+:daemon: 
+
+:pid_file: 
+
+:remote_passwd_file: passwd
+
+:remote_passwd_use_bcrypt: false
+
+:listen:
+  :ip: 0.0.0.0
+  :port: 2100
