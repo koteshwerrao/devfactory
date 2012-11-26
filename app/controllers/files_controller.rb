@@ -10,6 +10,7 @@ class FilesController < ApplicationController
     @dirs, @files = FileManager.seg(ftp.list)
     @current = ftp.pwd.gsub!("/","")
     ftp.close
+
   end
 
   def new
@@ -38,7 +39,21 @@ class FilesController < ApplicationController
 	def mkdir_item
 	end
 	
-	def delete_item
+	def delete_file
+	   ftp =	FileManager.ftp_connect
+     @ftp = params[:file]
+     resp = ftp.sendcmd("DELE " + @ftp)
+	   ftp.close
+	   redirect_to files_path
 	end
+
+  def remove_directory
+    ftp =	FileManager.ftp_connect
+    @ftp = params[:dir]
+    ftp.voidcmd("RMD " + @ftp)
+    ftp.close
+	 redirect_to files_path
+ 
+end
 
 end

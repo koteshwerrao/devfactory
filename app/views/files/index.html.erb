@@ -1,17 +1,31 @@
 <%= link_to "Upload New File", new_file_path%><br/>
-	<ul>
+<table class= "table_design">
+ <tr>
+     <th>File Name</th>
+     <th>Size</th>
+     <th>Delete</th>
+     <th>Download</th>
+</tr>
 		<%@dirs.each do |dir|%>
+<tr>
 		<%if format_name(dir) == "."%>
-			<li><%=link_to "..back", get_item_path(:t => "dir", :f => "/")%></li>
+			<td><%=link_to "..back", get_item_path(:t => "dir", :f => "/")%></td>
 		<%else%>
-			<li><%=link_to format_name(dir), get_item_path(:t => "dir", :f => format_name(dir))%></li>
+			<td><%=link_to format_name(dir), get_item_path(:t => "dir", :f => format_name(dir))%></td>
+ <td><%= dir.size %></td>
+ <td><%= link_to "Delete",remove_dir_path(:dir => format_name(dir)) %></td>
 		<%end%>		
 		<%end%>
-	</ul>
 	
-	<ul>
 		<%@files.each do |file|%>
-			<li><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)) %></li>
+			<td><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)) %></td>
+<td><%= file.size %></td>
+<td><%= link_to "Delete",delete_file_path(:file=> format_name(file)) %></td>
+<td><%= link_to "Download",get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)) %>
+</td>
+
+</tr>
 		<%end%>
-	</ul>
+</table><br/>
+
 
