@@ -1,31 +1,35 @@
-<%= link_to "Upload New File", new_file_path%><br/>
+<p>Welcome</p>
+<%= link_to "Upload New File", new_file_path,:style=>"color:green;"%><br/>
 <table class= "table_design">
  <tr>
      <th>File Name</th>
      <th>Size</th>
-     <th>Delete</th>
      <th>Download</th>
+     <th>Delete</th>
 </tr>
-		<%@dirs.each do |dir|%>
+	<%@dirs.each do |dir|%>
 <tr>
-		<%if format_name(dir) == "."%>
-			<td><%=link_to "..back", get_item_path(:t => "dir", :f => "/")%></td>
-		<%else%>
-			<td><%=link_to format_name(dir), get_item_path(:t => "dir", :f => format_name(dir))%></td>
- <td><%= dir.size %></td>
- <td><%= link_to "Delete",remove_dir_path(:dir => format_name(dir)) %></td>
+	<%if format_name(dir) == "."%>
+	<td><%=link_to "..back", get_item_path(:t => "dir", :f => "/")%></td>
+	<td></td>
+	<td></td>
+	  <%else%>
+	  <td><%=link_to format_name(dir), get_item_path(:t => "dir", :f => format_name(dir)),:style=>"color:blue;"%></td>
+      <td><%= dir.size %></td>
+      <td> </td>
+      <td><%= link_to "Delete",remove_dir_path(:dir => format_name(dir)),:style=>"color:red;"%></td> 
+      
 		<%end%>		
 		<%end%>
-	
+	</tr>
+
 		<%@files.each do |file|%>
-			<td><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)) %></td>
-<td><%= file.size %></td>
-<td><%= link_to "Delete",delete_file_path(:file=> format_name(file)) %></td>
-<td><%= link_to "Download",get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)) %>
-</td>
+		<tr>
+			<td><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:blue;" %></td>
+             <td><% match = file.match(@reg)%><%= match[:size]%></td>
+             <td><%= link_to "Download",get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:green;" %></td>
+              <td><%= link_to "Delete",delete_file_path(:file=> format_name(file)),:style=>"color:red;" %></td>
 
-</tr>
-		<%end%>
+        </tr>
+          <%end%>
 </table><br/>
-
-
