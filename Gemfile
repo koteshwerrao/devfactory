@@ -16,8 +16,14 @@ gem "happening", :git => "https://github.com/yob/happening.git"
 gem "em-ftpd", :git => "https://github.com/yob/em-ftpd.git"
 gem "s3ftp", :git => "https://github.com/bharthur/s3ftp.git"
 
+
+
+
+
+
 group :test do
   gem "mocha",:require => false
+  gem 'rspec-rails'
   gem "capybara", ">= 1.1.1"
   gem 'cucumber-rails', '>= 0.5.1'
   gem 'factory_girl',   '2.3.2'

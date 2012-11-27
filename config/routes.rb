@@ -1,6 +1,4 @@
 S3EmFtp::Application.routes.draw do
-  
-
   root :to => 'files#index'
  	match "/upload" => "files#upload"
  	match "/filedir" => "files#get_item", as: :get_item
