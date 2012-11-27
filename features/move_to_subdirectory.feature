@@ -1,4 +1,4 @@
-Feature:Uploading New File
+Feature:Move to sub directory
 
 Scenario:Home page
    Given I will upload the username "user"
@@ -6,14 +6,9 @@ Scenario:Home page
    Then I go to the root page
 
 
-Scenario:Upload file
+Scenario:moveing sub directory
     Given I go to the root page
-    Then I press Upload New File
-    And I browse image
-    And I upload the file
-
+    And I click "test123"
+    And I click "back"
+    Then I will see the home page
     
-    
-    
-
-

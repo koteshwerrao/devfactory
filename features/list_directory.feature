@@ -1,4 +1,4 @@
-Feature:Uploading New File
+Feature:List of directories
 
 Scenario:Home page
    Given I will upload the username "user"
@@ -6,14 +6,9 @@ Scenario:Home page
    Then I go to the root page
 
 
-Scenario:Upload file
+Scenario:show directories
     Given I go to the root page
-    Then I press Upload New File
-    And I browse image
-    And I upload the file
+    Then I click "test"
+    And I will see the home page
 
-    
-    
-    
-
-
+   
