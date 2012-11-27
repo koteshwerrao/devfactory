@@ -1,0 +1,14 @@
+1)Upload password file likethat data
+"admin","test123","y"
+"user","test123","n"
+2)Start the rails server
+  rais s
+3)Run another terminal  at the same time
+  bundle exec s3ftp --config config/config.yml
+4)Delete the file or directory click the delete link
+5)download the file click the download link  the file will be stores our application folder.
+6)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian
+Bucketname: em-ftpd-trial-kotesh
+link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
+Software version for ubuntu:
+"DragonDisk v1.05 for Debian 6 - i386"

@@ -3,7 +3,7 @@
 <table class= "table_design">
  <tr>
      <th>File Name</th>
-     <th>Size</th>
+     <th>Size(Bytes)</th>
      <th>Download</th>
      <th>Delete</th>
 </tr>
@@ -23,13 +23,13 @@
 		<%end%>
 	</tr>
 
-		<%@files.each do |file|%>
-		<tr>
-			<td><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:blue;" %></td>
-             <td><% match = file.match(@reg)%><%= match[:size]%></td>
-             <td><%= link_to "Download",get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:green;" %></td>
-              <td><%= link_to "Delete",delete_file_path(:file=> format_name(file)),:style=>"color:red;" %></td>
+	<%@files.each do |file|%>
+	 <tr>
+		<td><%=link_to format_name(file), get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:blue;" %></td>
+        <td><% match = file.match(@reg)%><%= match[:size]%></td>
+        <td><%= link_to "Download",get_item_path(:t => "file", :f => "#{@current}/#{format_name(file)}", :n => format_name(file)),:style=>"color:green;" %></td>
+        <td><%= link_to "Delete",delete_file_path(:file=> format_name(file)),:style=>"color:red;" %></td>
 
-        </tr>
-          <%end%>
+     </tr>
+     <%end%>
 </table><br/>
