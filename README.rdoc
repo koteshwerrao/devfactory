@@ -1,3 +1,12 @@
+Install this software
+
+link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
+Software version for ubuntu:
+"DragonDisk v1.05 for Debian 6 - i386"
+
+
+
+
 1)Upload password file likethat data
 "admin","test123","y"
 "user","test123","n"
@@ -16,6 +25,5 @@
 6)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian
 
 Bucketname: em-ftpd-trial-kotesh
-link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
-Software version for ubuntu:
-"DragonDisk v1.05 for Debian 6 - i386"
+
+

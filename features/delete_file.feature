@@ -8,4 +8,13 @@ Scenario:Home page
 Scenario:delete the file
     Given I go to the root page
     And I click "Delete"
+    And I pressed Ok
     And I will see the home page
+@delete
+Scenario:Delete the file with cancelbutton
+    Given I go to the root page
+    And I click "Delete"
+    And I press Cancel
+    And I will see the home page
+   
+
