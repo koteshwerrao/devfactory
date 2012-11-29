@@ -1,4 +1,4 @@
-##List of steps for Run the application ####
+##List of steps for Run the Application ####
 
 ##For amazon s3 i am using dragondisk Software###
 

@@ -7,7 +7,7 @@ class FilesController < ApplicationController
       ftp = FileManager.ftp_connect
       unless params[:path].blank?
       ftp.chdir(params[:path])
-        end
+      end
       @dirs, @files = FileManager.seg(ftp.list)
       @current = ftp.pwd.gsub!("/","")
       ftp.close
