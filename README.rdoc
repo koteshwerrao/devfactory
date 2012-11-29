@@ -9,12 +9,15 @@ Software version for ubuntu:
 
 
 
-Enter the data Like data....
+Enter the data Like that....
 
  
 Accountname:devfactory
+
 AccessKey: AKIAJ2IGHZQHCSJYT22A
+
 SecretKey: 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
+
 Bucketname: em-ftpd-trial-kotesh
 
 
