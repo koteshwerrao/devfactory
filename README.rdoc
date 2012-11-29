@@ -6,6 +6,8 @@
 link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
 Software version for ubuntu:
 "DragonDisk v1.05 for Debian 6 - i386"
+
+
 Enter the data Like data.... 
 Accountname:devfactory
 AccessKey: AKIAJ2IGHZQHCSJYT22A
