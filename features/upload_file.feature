@@ -5,7 +5,7 @@ Scenario:Home page
    And I will upload the password "test123"
    Then I go to the root page
 
-
+@upload
 Scenario:Upload file
     Given I go to the root page
     Then I press Upload New File

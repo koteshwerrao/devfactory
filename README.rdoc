@@ -1,6 +1,6 @@
 ##List of steps for Run the application ####
 
-##For amazon s3 i am using dragondisk###
+##For amazon s3 i am using dragondisk Software###
 
 1)First Install this software  for amazon s3.
 link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
@@ -38,18 +38,20 @@ Bucketname: em-ftpd-trial-kotesh
 
 5)Delete the file or directory click the delete link.
 
-6)download the file click the download link  the file will be stores our application folder.(or) click on the file name also it will download.
+6)Download the file click the download link  the file will be stores our application folder (or) click on the file name also it will  be download our application folder.
 
 7)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian software.
 
 ###Testing###
 
 Testcases:
+
   Note:Running testcases time should must start the ftp server also..
      bundle exec s3ftp --config config/config.yml
    
  Cucumber:
    bundle exec cucumber features
+
  Rspec:
    bundle exec rspec spec/controllers/files_controller_spec.rb like...
 

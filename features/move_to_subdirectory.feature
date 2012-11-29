@@ -5,7 +5,7 @@ Scenario:Home page
    And I will upload the password "test123"
    Then I go to the root page
 
-
+@movetosubdirectory
 Scenario:moveing sub directory
     Given I go to the root page
     And I click "test123"
