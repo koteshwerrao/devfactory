@@ -1,29 +1,44 @@
-Install this software
-
+##List of steps for Run the application ####
+##For amazon s3 i am using dragondisk###
+1)First Install this software for amazon s3 our system
 link:http://www.dragondisk.com/download-amazon-s3-client-google-cloud-storage-client.html	
 Software version for ubuntu:
 "DragonDisk v1.05 for Debian 6 - i386"
+Enter the data Like data.... 
+Accountname:devfactory
+AccessKey: AKIAJ2IGHZQHCSJYT22A
+SecretKey: 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
+Bucketname: em-ftpd-trial-kotesh
 
 
 
-
-1)Upload password file likethat data
+2)Upload password file likethat data
 "admin","test123","y"
 "user","test123","n"
 
-
-2)Start the rails server
+###Running server
+3)Start the rails server
   rais s
-
-3)Run another terminal  at the same time
+###Running ftp server
+4)Run another terminal  at the same time
   bundle exec s3ftp --config config/config.yml
 
-4)Delete the file or directory click the delete link
+5)Delete the file or directory click the delete link
 
-5)download the file click the download link  the file will be stores our application folder.
+6)download the file click the download link  the file will be stores our application folder.
 
-6)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian
+7)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian software
 
-Bucketname: em-ftpd-trial-kotesh
+###Testing
+Testcases:
+  Note:Running testcases time should must start the ftp server also..
+     bundle exec s3ftp --config config/config.yml
+   
+ Cucumber:
+   bundle exec cucumber features
+ Rspec:
+   bundle exec rspec spec/controllers/files_controller_spec.rb like...
+
+
 
 
