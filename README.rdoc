@@ -33,12 +33,12 @@ Bucketname: em-ftpd-trial-kotesh
 
 ###Running ftp server##
 
-4)Run another terminal  at the same time.
+4)Run another terminal s3ftp server at the same time.
   bundle exec s3ftp --config config/config.yml
 
 5)Delete the file or directory click the delete link.
 
-6)Download the file click the download link  the file will be stores our application folder (or) click on the file name also it will  be download our application folder.
+6)Download the file click  use the download link .The file will be stores our application folder (or) click on the file name also it will  be download our application folder.
 
 7)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian software.
 
