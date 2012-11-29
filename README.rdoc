@@ -26,12 +26,12 @@ Bucketname: em-ftpd-trial-kotesh
 "admin","test123","y"
 "user","test123","n"
 
-###Running server
+###Running server##
 
 3)Start the rails server
   rais s
 
-###Running ftp server
+###Running ftp server##
 
 4)Run another terminal  at the same time.
   bundle exec s3ftp --config config/config.yml
@@ -42,7 +42,7 @@ Bucketname: em-ftpd-trial-kotesh
 
 7)Checking for files uploading and downloading i am using  DragonDisk Amazon S3 Client for Debian software.
 
-###Testing
+###Testing###
 
 Testcases:
   Note:Running testcases time should must start the ftp server also..
