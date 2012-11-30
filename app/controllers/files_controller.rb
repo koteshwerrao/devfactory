@@ -22,6 +22,7 @@ class FilesController < ApplicationController
   	  ftp =	FileManager.ftp_connect
  		  ftp.putbinaryfile(path, remotefile = params[:file].original_filename)
       ftp.close
+      flash[:notice] = "File Uploaded Successfully"
  		  redirect_to files_path
   end
 
@@ -47,7 +48,7 @@ class FilesController < ApplicationController
       @ftp = params[:file]
       resp = ftp.sendcmd("DELE " + @ftp)
 	    ftp.close
-      flash[:notice] = "Successfully Deleted!"
+      flash[:notice] = "File  Deleted Successfully"
 	    redirect_to files_path
 end
 
@@ -56,8 +57,8 @@ end
       ftp =	FileManager.ftp_connect
       @ftp = params[:dir]
       ftp.voidcmd("RMD " + @ftp)
-      flash[:alert] = "Successfully Deleted!"
-      ftp.close
+       ftp.close
+       flash[:notice] = "Directory Deleted Successfully "
 	    redirect_to files_path
   end
 end

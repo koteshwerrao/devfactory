@@ -14,9 +14,9 @@ Enter the data Like that....
  
 Accountname:devfactory
 
-AccessKey: AKIAJ2IGHZQHCSJYT22A
+AccessKey: ""
 
-SecretKey: etpwFn9XnqWrfYKwrr2++++hgmEBFMxCvuBus/Xy
+SecretKey: ""
 
 Bucketname: em-ftpd-trial-kotesh
 
@@ -32,6 +32,9 @@ Bucketname: em-ftpd-trial-kotesh
   rais s
 
 ###Running ftp server##
+
+4)Put the config.yml file into config folder..
+
 
 4)Run another terminal s3ftp server at the same time.
   bundle exec s3ftp --config config/config.yml
