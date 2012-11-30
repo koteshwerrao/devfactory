@@ -33,7 +33,7 @@ Bucketname: em-ftpd-trial-kotesh
 
 ###Running ftp server##
 
-4)Put the config.yml file into config folder..
+4)Put the config.yml file into  application config folder inside..
 
 
 4)Run another terminal s3ftp server at the same time.
