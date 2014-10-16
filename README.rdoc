@@ -29,7 +29,7 @@ Bucketname: em-ftpd-trial-kotesh
 ###Running server##
 
 3)Start the rails server
-  rais s
+  rails s
 
 ###Running ftp server##
 
